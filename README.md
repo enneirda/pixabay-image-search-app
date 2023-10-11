@@ -1,6 +1,6 @@
 # Pixabay Image Search
 
-This is a search app that leverages [Pixabay] https://pixabay.com/api/docs/ as a data source.
+This is a search app that leverages [Pixabay] (https://pixabay.com/api/docs/) as a data source.
 
 ## Image Search Page 
 This is the main screen where users can search for images using keywords. 
@@ -16,7 +16,6 @@ Pagination allows for users to navigate through pages of up to 500 images with 3
 
 
 ## Image Details Page
-### Image Details
 This displays the selected image in a larger version along with any relevant tags.
 
 ## Routing
