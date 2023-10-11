@@ -41,6 +41,9 @@
 }
 
 
+.ValidationError {
+  color: #D63301;
+}
 .GridContainer img {
   width: 100%;
   height: 200px;

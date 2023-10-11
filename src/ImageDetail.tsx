@@ -1,29 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { Form, useLoaderData } from "react-router-dom";
-
-
-
-type image = {
-    id: number;
-    imageUrl: string;
-}
+import {useLoaderData } from "react-router-dom";
 
 
 function ImageDetail() {
 
     const { imageDetails } = useLoaderData() as any;
-
-
-
-
-    //back to homepage
-
-    console.log(imageDetails);
-
-
-
     return (
         <div className="App">
             <img src={imageDetails.webformatURL} alt="logo" />
