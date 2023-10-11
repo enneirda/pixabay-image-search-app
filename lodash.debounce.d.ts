@@ -1,4 +1,3 @@
-declare module 'lodash.debounce' {
-    export function debounce(): any
+declare module "lodash.debounce" {
+  export function debounce(): any;
 }
-
