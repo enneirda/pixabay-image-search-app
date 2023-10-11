@@ -1,4 +1,27 @@
-# Getting Started with Create React App
+# Pixabay Image Search
+
+This is a search app that leverages [Pixabay] https://pixabay.com/api/docs/ as a data source.
+
+## Image Search Page 
+This is the main screen where users can search for images using keywords. 
+
+### Search Bar
+The character limit is 100 and a validation error is triggered if the user tries to enter more than 300 characters.
+
+### Image List
+This displays the list of image previews in a grid. Each image is rendered at the same size, and is clickable. Clicking on an image loads the image detail page
+
+### Pagination
+Pagination allows for users to navigate through pages of up to 500 images with 30 images on each page.
+
+
+## Image Details Page
+### Image Details
+This displays the selected image in a larger version along with any relevant tags.
+
+## Routing
+React Router is used to navigate between the image search screen and the image detail screen. 
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

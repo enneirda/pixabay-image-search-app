@@ -1,6 +1,7 @@
 const API_KEY = "39980012-86dad44d4894f9081f9fe0228";
 const baseURL = "https://pixabay.com/api/?key=" + API_KEY;
 
+export const IMAGE_LIMIT = 30;
 export type Image = {
   id: number;
   previewURL: string;
@@ -15,7 +16,7 @@ export type PixabayResponse = {
   totalHits: number;
 };
 export const getSearchURL = (searchQuery: string, pageNumber?: number) => {
-  return `${baseURL}&per_page=50&page=${pageNumber || 1}&q=${encodeURIComponent(
+  return `${baseURL}&per_page=${IMAGE_LIMIT}&page=${pageNumber || 1}&q=${encodeURIComponent(
     searchQuery,
   )}`;
 };

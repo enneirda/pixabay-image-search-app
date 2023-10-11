@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import "./App.css";
-import { getSearchURL, Image, PixabayResponse } from "./helpers";
+import { getSearchURL, Image, PixabayResponse, IMAGE_LIMIT } from "./helpers";
 import debounce from "lodash.debounce";
 
 const useDebounce = (callback: any) => {
@@ -28,7 +28,7 @@ function App() {
   const [numResults, setNumResults] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
 
-  const numPages = Math.ceil(numResults / 50);
+  const numPages = Math.ceil(numResults / IMAGE_LIMIT);
 
   const debouncedSearchRequest = useDebounce(() => {
     fetch(getSearchURL(searchQuery, pageNumber))
@@ -37,11 +37,11 @@ function App() {
         return data;
       })
       .then((data) => {
-        console.log(data);
         setNumResults(data.totalHits);
         setImages(data.hits);
       });
   });
+
   useEffect(() => {
     debouncedSearchRequest();
   }, [pageNumber]);
