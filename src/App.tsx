@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-
-const API_KEY = '39980012-86dad44d4894f9081f9fe0228';
-const baseURL = "https://pixabay.com/api/?key="+API_KEY;
-
-const getSearchURL = (searchQuery: string) => {
-
-  return `${baseURL}&q=${encodeURIComponent(searchQuery)}`;
-}
+import { getSearchURL } from './helpers';
 
 
-type Image = {
+export type Image = {
   id: number;
   previewURL: string;
+  webformatURL: string;
+  user: string;
+  tags: string;
 }
 
 type PixabayResponse = {
@@ -45,12 +41,12 @@ function App() {
       <header>
         Pixabay Image Search
       </header>
-      <div>What type of image would you like to see? </div>
+      <div>What type of image would you like to see?</div>
       <input type="text" value={searchQuery} onChange={handleChange}/>
 
       <div className="GridContainer">
       {images.map(image => {
-      return <img key={image.id} src={image.previewURL} alt="logo"/>
+      return <a key={image.id} href={`/imageDetails/${image.id}`}><img src={image.previewURL} alt="logo"/></a>
   })}
   </div>
 

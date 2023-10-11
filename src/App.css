@@ -28,15 +28,21 @@
   color: #61dafb;
 }
 
-
-.GridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+.App-div {
+  margin-bottom: 100px;
 }
 
 
-.GridContainer-img {
+.GridContainer {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 10px 10px
+}
+
+
+.GridContainer img {
   width: 100%;
-  height: 500px;
+  height: 200px;
 }
 
