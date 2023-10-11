@@ -22,6 +22,12 @@ This displays the selected image in a larger version along with any relevant tag
 React Router is used to navigate between the image search screen and the image detail screen. 
 
 
+### Future Enhancements
+- Unit Tests - Write jest tests to test that components and key functions work as expected
+- Network Error Handling - Add catch block to each network request and inform user of error
+- Frontend Error Handling - Add Error Boundary to catch any frontend/rendering issues
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
